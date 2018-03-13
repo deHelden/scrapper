@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20180227064241) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "time"
+    t.string "date"
   end
 
 end

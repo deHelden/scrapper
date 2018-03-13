@@ -1,23 +1,31 @@
 
-<% Parser.new.perform %>
 <h1 style="text-align: center; ">3 TOP NEWS FROM RIA.RU</h1>
 <div class="l-page-width">
   <div class="l-page-width__ledge">
     <div class="l-slide-columns">
       <div class="l-main-column" style="padding-top: 0px; border-top: 0px none;">
         <div class="b-lists-wr">
-        <div class="b-list-normal">
-          <div class="b-list">
 
-              <% @ria_all_news.order(:date, time: :desc).each do |article|%>
-                <div class="b-list__item">Title: <span class="b-list__item-title"><%= link_to article.title, "https://ria.ru#{article.url}"%></span>
-                  <div class="b-list__item-time"><span><%= article.time %></span></div>
-                  <div class="b-list__item-date"><span><%= article.date %></span></div>
-                </div>
-              <%end%>
+        <div class="jsTabs-tabs-list">
 
-          </div>
+
         </div>
+          <div class="b-list-normal">
+            <div class="b-list">
+
+               <%= paginate @ria_all_news  %>
+
+                <% @ria_all_news.each do |article|%>
+                  <div class="b-list__item">Title: <span class="b-list__item-title"><%= link_to article.title, "https://ria.ru#{article.url}"%></span>
+                    <div class="b-list__item-time"><span><%= article.time %></span></div>
+                    <div class="b-list__item-date"><span><%= article.date %></span></div>
+                  </div>
+                <%end%>
+
+
+
+            </div>
+          </div>
         </div>
       </div>
     </div>

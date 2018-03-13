@@ -282,4 +282,101 @@ a {
     color: #282828;
     text-decoration: none;
 }
-
+.jsTabs .jsTabs-tabs-list {
+ margin:0 -0.5em 1em;
+ text-align:left
+}
+.jsTabs .jsTabs-tabs-list .jsTabs-point {
+ -moz-user-select:-moz-none;
+ -ms-user-select:none;
+ -webkit-user-select:none;
+ user-select:none;
+ position:relative;
+ padding:0 0 .19em 0;
+ margin:0 .5em;
+ font-weight:700;
+ text-transform:uppercase;
+ cursor:pointer;
+ color:#b7b7b7;
+ display:inline-block;
+ vertical-align:middle
+}
+.jsTabs .jsTabs-tabs-list .jsTabs-point span {
+ font-size:.75em
+}
+.jsTabs .jsTabs-tabs-list .jsTabs-point.jsTabs-active {
+ cursor:default
+}
+.jsTabs .jsTabs-tabs-list .jsTabs-point.jsTabs-active span {
+ color:#62a7d9
+}
+.jsTabs .jsTabs-tabs-list .jsTabs-point.jsTabs-active:hover {
+ text-decoration:none
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-center {
+ text-align:center
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-bg-grey-center {
+ background:#f4f4f4;
+ margin:0 0 1em;
+ text-align:center;
+ padding:.44em .5em
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-bg-grey-center .jsTabs-point {
+ color:#7c7c7c
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-bg-grey-center .jsTabs-point span {
+ padding:0 .5em
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-bg-grey-center.jsTabs-small {
+ padding-left:0;
+ padding-right:0
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-bg-grey-center.jsTabs-small .jsTabs-point {
+ margin:0 .25em
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-bg-grey-center.jsTabs-small .jsTabs-point span {
+ padding:0 .25em;
+ font-size:.69em
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center {
+ margin:0 0 1em;
+ text-align:center
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point {
+ background:#f4f4f4;
+ color:#7c7c7c;
+ margin:0;
+ padding:.44em 1px .625em 0
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point span {
+ padding:0 1.25em
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point:last-child {
+ padding-right:0
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point:after {
+ display:block;
+ content:'';
+ position:absolute;
+ top:.44em;
+ bottom:.44em;
+ left:-1px;
+ border-left:1px solid #dfdfdf
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point:first-child:after {
+ display:none
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point.jsTabs-active {
+ cursor:default;
+ background:#dfdfdf
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point.jsTabs-active span {
+ color:#282828
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point.jsTabs-active:after {
+ display:none
+}
+.jsTabs .jsTabs-tabs-list.jsTabs-theme-grey-center .jsTabs-point.jsTabs-active:hover {
+ text-decoration:none
+}
