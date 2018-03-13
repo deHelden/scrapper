@@ -1,8 +1,8 @@
 class HelloController < ApplicationController
   def index
       #Parser.new.perform
-      @ria_all_news = RiaNew.order(date: :desc, time: :desc).page(params[:page])
-
+      require 'open-uri'
+      @ria_all_news = RiaNew.order(date: :desc, time: :desc).page(params[:page]).per(5)
 
       respond_to do |format|
         format.html  #index.html.erb
