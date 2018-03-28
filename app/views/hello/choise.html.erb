@@ -1,0 +1,32 @@
+
+<body>
+  <div class="container">
+    <h1 style="text-align: center; ">CHOOSE UR SIDE JEDI!</h1>
+    <div class="row justify-content-md-center">
+      <div class="row">
+       <!--  <div class="div-hover" style="border: 1px solid; width:170px; height:100px;
+        background-color: #ea1111; border-radius: 6px;">
+        <%= link_to "Lady news", lady_path,style: "display:flex; color:white; width:170px; height:100px; justify-content:center; align-items:center; font-size:20pt;text-decoration: none; "  %>
+        </div> -->
+        <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Lady news", lady_path  %></button></div>
+        <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Ria news", ria_path  %></button></div>
+        <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Log File", log_path  %></button></div>
+      </div>
+
+      <div class="col-md-auto">
+        <% @all_news.each do |article|%>
+        <div class="alert alert-info row" >
+          <h4 class="col-7" style="float:left;"><%= link_to article.title, "https://ria.ru#{article.url}"%></h4>
+             <div class="col"><span>Time: <%= article.time %></span></div>
+             <div class="col"><span>Date: <%= article.date %></span></div>
+        </div>
+        <br>
+        <%end%>
+      </div>
+
+      <div class="row">
+        <%= paginate @all_news %>
+      </div>
+    </div>
+  </div>
+</body>

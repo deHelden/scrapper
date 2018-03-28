@@ -18,7 +18,11 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :output, "cron.log"
 
-every 1.day, at: '14:05' do
-  runner "Parser.new.perform"
+env :PATH, ENV['PATH']
+
+every 1.day, at: ['11:00','12:00','13:00','14:00', '16:30', '17:15'] do
+  runner "Parser_self.new.perform", environment: :development,
+                               output: 'cron.log'
 end

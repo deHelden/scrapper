@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-5"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Ria news", ria_path  %></button></div>
+    <div class="col-5"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Lady news", lady_path  %></button></div>
+    <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Log File", log_path  %></button></div>
+  </div>
+</div>
+
+<div class="container">
+  <% @file.each do |line| %>
+    <ul>
+      <li class="alert alert-warning"><%= "#{line}" %></li>
+    </ul>
+  <% end %>
+</div>
+

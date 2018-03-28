@@ -3,25 +3,25 @@
 
 
 <div class="container">
-  <%= paginate @ria_all_news %>
+  <div class="row">
+    <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Lady news", lady_path  %></button></div>
+    <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Start Page", root_path  %></button></div>
+    <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Log File", log_path  %></button></div>
+    <%= paginate @ria_all_news %>
+  </div>
 </div>
 
 <div class="container">
 <% @ria_all_news.each do |article|%>
-    <div class="border rounded">
-        <div class="alert alert-primary"><%= link_to article.title, "https://ria.ru#{article.url}"%></div>
-        <div class="row ">
-          <div class="col"></div>
-          <div class="col-md-auto"><span><%= article.time %></span></div>
-          <div class="col-lg-2"><span><%= article.date %></span></div>
+        <div class="alert alert-primary row" >
+          <h4 class="col-7" style="float:left;"><%= link_to article.title, "https://ria.ru#{article.url}"%></h4>
+             <div class="col"><span>Time: <%= article.time %></span></div>
+              <div class="col"><span>Date: <%= article.date %></span></div>
         </div>
-      </div>
       <br>
 <%end%>
-
-<div class="container">
-  <%= paginate @ria_all_news %>
 </div>
-
+<div class="container" >
+  <%= paginate @ria_all_news %>
 </div>
 

@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'feedjira'
+gem 'simple-rss'
+gem 'whenever'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem 'kaminari'
