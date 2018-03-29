@@ -25,6 +25,6 @@ class HelloController < ApplicationController
   end
 
   def choise
-    @all_news = Article.all.order(date: :desc, time: :desc).page(params[:page]).per(10)
+    @all_news = Article.all.order(date: :desc, time: :desc).page(params[:page]).per(5)
   end
 end

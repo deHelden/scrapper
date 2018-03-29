@@ -22,7 +22,7 @@ set :output, "cron.log"
 
 env :PATH, ENV['PATH']
 
-every 1.day, at: ['11:00','12:00','13:00','14:00', '16:30', '17:15'] do
+every 1.day, at: ['11:00','12:00','13:00','14:00', '16:30', '17:37'] do
   runner "Parser_self.new.perform", environment: :development,
                                output: 'cron.log'
 end

@@ -10,21 +10,21 @@
       doc = Nokogiri::HTML(open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE) )
       entries = doc.css('.b-list-normal')[0].css('.b-list').css('.b-list__item')
 
-      entries.first(5).each do |entry|
+      entries.first(10).each do |entry|
         #Cut out html from string
          # date_and_time =
          #   ActionView::Base.full_sanitizer.sanitize("#{entry.css('.entry-time').css('.span')}")
 
         RiaNew.create(
             # url: entry.css('.b-list__item').xpath('a/@href').first.value,
-            url: entry.xpath('a/@href').first.value,
+            url: "https://ria.ru" + entry.xpath('a/@href').first.value,
             title: entry.css('.b-list__item-title').css('span')[0].text,
             time: entry.css('.b-list__item-time').css('span')[0].text,
             date: entry.css('.b-list__item-date').css('span')[0].text
         )
         Article.create(
             # url: entry.css('.b-list__item').xpath('a/@href').first.value,
-            url: entry.xpath('a/@href').first.value,
+            url: "https://ria.ru" + entry.xpath('a/@href').first.value,
             title: entry.css('.b-list__item-title').css('span')[0].text,
             time: entry.css('.b-list__item-time').css('span')[0].text,
             date: entry.css('.b-list__item-date').css('span')[0].text

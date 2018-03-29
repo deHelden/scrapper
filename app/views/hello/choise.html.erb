@@ -11,12 +11,14 @@
         <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Lady news", lady_path  %></button></div>
         <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Ria news", ria_path  %></button></div>
         <div class="col-md-auto"><button class="btn btn-lg disabled text-" role="button" aria-disabled="true" ><%= link_to "Log File", log_path  %></button></div>
+
       </div>
 
       <div class="col-md-auto">
+        <%= paginate @all_news %>
         <% @all_news.each do |article|%>
         <div class="alert alert-info row" >
-          <h4 class="col-7" style="float:left;"><%= link_to article.title, "https://ria.ru#{article.url}"%></h4>
+          <h4 class="col-7" style="float:left;"><%= link_to article.title, article.url, target: "_blank"%></h4>
              <div class="col"><span>Time: <%= article.time %></span></div>
              <div class="col"><span>Date: <%= article.date %></span></div>
         </div>

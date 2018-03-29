@@ -14,7 +14,7 @@
 <div class="container">
 <% @ria_all_news.each do |article|%>
         <div class="alert alert-primary row" >
-          <h4 class="col-7" style="float:left;"><%= link_to article.title, "https://ria.ru#{article.url}"%></h4>
+          <h4 class="col-7" style="float:left;"><%= link_to article.title, article.url, target: "_blank"%></h4>
              <div class="col"><span>Time: <%= article.time %></span></div>
               <div class="col"><span>Date: <%= article.date %></span></div>
         </div>
